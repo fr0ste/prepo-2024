@@ -2,7 +2,7 @@
   <div class="container mx-auto text-center">
     <p class="text-lg mb-4">¡La cuenta regresiva ha comenzado! Nos vemos pronto.</p>
     <div class="flex justify-center space-x-4">
-      @for (timeUnit of timeLeft; track timeUnit) {
+      @for (timeUnit of timeLeft; track $index) {
         <div class="text-sm">
           <span class="font-bold">{{ timeUnit.value }}</span> {{ timeUnit.key }}
         </div>
