@@ -38,4 +38,7 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
       { key: 'Segundos', value: seconds },
     ];
   }
+
+
+    
 }
