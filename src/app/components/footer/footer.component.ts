@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule], // Importar CommonModule
+  imports: [], // Importar CommonModule
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'] // Corregido a styleUrls
 })

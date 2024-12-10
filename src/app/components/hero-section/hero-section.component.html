@@ -1,18 +1,20 @@
 <section class="text-center py-20">
-  <h1 class="text-4xl md:text-6xl font-bold mb-4 text-red-500 fade-in">
+  <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">
     ¡Celebremos juntos la Posada de Informática 2024!
   </h1>
-  <p class="text-xl md:text-2xl mb-8 text-green-400 fade-in delay">
+  <p class="text-xl md:text-2xl mb-8 fade-in delay">
     Un momento para compartir, disfrutar y cerrar el año con estilo.
   </p>
   <div class="grid grid-cols-4 gap-4 text-center mb-8">
-    <div *ngFor="let timeUnit of timeLeft" class="bg-gray-800 rounded-lg p-4 shadow-lg">
-      <div class="text-3xl md:text-5xl font-bold text-white">
-        {{ timeUnit.value }}
+    @for (timeUnit of timeLeft; track timeUnit) {
+      <div class="time rounded-lg p-4 shadow-lg">
+        <div class="text-3xl md:text-5xl font-bold text-white">
+          {{ timeUnit.value }}
+        </div>
+        <div class="text-sm md:text-base">
+          {{ timeUnit.key }}
+        </div>
       </div>
-      <div class="text-sm md:text-base text-gray-400">
-        {{ timeUnit.key }}
-      </div>
-    </div>
+    }
   </div>
 </section>

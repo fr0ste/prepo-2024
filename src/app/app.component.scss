@@ -1,8 +1,6 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #111827;
-    color: #ffffff;
   }
   
   h1, h2 {
@@ -14,6 +12,5 @@ body {
   }
   
   button:hover {
-    background-color: #10b981;
+    background-color: var(--green);
   }
-  
