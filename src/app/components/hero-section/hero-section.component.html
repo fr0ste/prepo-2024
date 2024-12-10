@@ -284,7 +284,7 @@
 
     <!-- Temporizador -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 py-6">
-      @for (timeUnit of timeLeft; track timeUnit) {
+      @for (timeUnit of timeLeft; track $index) {
       <div class="time rounded-lg p-4 shadow-lg text-white">
         <div class="text-2xl sm:text-4xl font-bold">{{ timeUnit.value }}</div>
         <div class="text-sm sm:text-base">{{ timeUnit.key }}</div>

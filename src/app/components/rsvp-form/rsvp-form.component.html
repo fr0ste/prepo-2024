@@ -1,10 +1,33 @@
-<!-- esto está como ejemplo, tenia pensado a un google docs cuando haga el submite pero no me dará tiempo si algún backend se lo avienta me avisa y le doy indicaciones -->
 <section class="py-12">
-    <h2 class="text-3xl font-bold mb-8 text-center text-white">Confirma tu Asistencia</h2>
-    <form (ngSubmit)="submitForm()" class="bg-gray-800 p-6 rounded-lg shadow-lg space-y-4 max-w-md mx-auto">
-      <input type="text" placeholder="Nombre Completo" class="w-full p-2 rounded-lg">
-      <input type="email" placeholder="Correo Electrónico" class="w-full p-2 rounded-lg">
-      <button type="submit" class="w-full bg-green-500 p-2 rounded-lg text-white font-bold">Enviar</button>
-    </form>
-  </section>
-  
+  <h2 class="text-3xl font-bold mb-8 text-center text-white"> 🎶 Arma la Playlist 🎶</h2>
+  <form (ngSubmit)="submitForm()" class="bg-gray-800 p-6 rounded-lg shadow-lg space-y-4 max-w-md mx-auto">
+    <label for="userName" class="block text-gray-300">Nombre del artista</label>
+    <input
+      id="userName"
+      type="text"
+      [(ngModel)]="userName"
+      name="userName"
+      class="w-full p-2 rounded-lg border"
+      placeholder="Escribe el nombre"
+      required
+    />
+
+    <label for="songName" class="block text-gray-300">Nombre de la canción</label>
+    <input
+      id="songName"
+      type="text" 
+      [(ngModel)]="songName"
+      name="songName"
+      class="w-full p-2 rounded-lg border"
+      placeholder="Escribe la canción"
+      required
+    />
+
+    <button
+      type="submit"
+      class="w-full bg-green-500 p-2 rounded-lg text-white font-bold"
+    >
+      Enviar
+    </button>
+  </form>
+</section>

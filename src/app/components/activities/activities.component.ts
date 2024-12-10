@@ -1,26 +1,45 @@
 import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {
+  faGamepad,
+  faMicrophone,
+  faPersonWalking,
+  faUsers ,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-activities',
   standalone: true,
-  imports: [],
+  imports: [FontAwesomeModule],
   templateUrl: './activities.component.html',
-  styleUrl: './activities.component.scss'
+  styleUrls: ['./activities.component.scss'],
 })
-
 export class ActivitiesComponent {
   activities = [
     {
-      icon: 'videogame_asset',
+      icon: faGamepad,
       color: 'text-green-500',
       title: 'Trivias Tecnológicas',
-      description: 'Pon a prueba tus conocimientos en informática y tecnología.'
+      description:
+        'Pon a prueba tus conocimientos en informática y tecnología.',
     },
     {
-      icon: 'mic',
+      icon: faMicrophone,
       color: 'text-red-500',
       title: 'Karaoke Navideño',
-      description: 'Canta tus villancicos favoritos con un toque tecnológico.'
-    }
+      description: 'Canta tus villancicos favoritos con un toque tecnológico.',
+    },
+    {
+      icon:   faPersonWalking,
+      color: 'text-blue-500',
+      title: 'Concurso de Baile',
+      description: '¡Participa y muestra tus mejores pasos!',
+    },
+    {
+      icon: faUsers, // Ícono reemplazado
+      color: 'text-green-500',
+      title: 'Juegos variados',
+      description: '¡Disfruta de una variedad de juegos!',
+    },
   ];
 }
