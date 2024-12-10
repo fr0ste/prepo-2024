@@ -9,5 +9,6 @@ import { Component } from '@angular/core';
 })
 
 export class GalleryComponent {
-  images = ['/comming.png', '/comming.png', '/comming.png', '/comming.png'];
+  images = ['/IMG-1.jpg', '/IMG-2.jpg', '/IMG-3.jpg', '/IMG-4.jpg', '/IMG-5.jpg', '/IMG-6.jpg', '/IMG-7.jpg', '/IMG-8.jpg'];
 }
+  
