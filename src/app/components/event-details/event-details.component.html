@@ -3,12 +3,20 @@
   <div class="grid md:grid-cols-3 gap-8">
     @for (detail of details; track detail) {
       <div class="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg">
-        <span class="material-icons {{ detail.color }} w-8 h-8">{{ detail.icon }}</span>
+        <fa-icon [icon]="detail.icon" class="w-8 h-8 {{detail.color}}"></fa-icon>
         <div>
           <h3 class="font-semibold">{{ detail.title }}</h3>
-          <p class="text-gray-300">{{ detail.description }}</p>
+          <p class="text-gray-300">
+            @if (detail.link) {
+              <span>
+                <a [href]="detail.link" target="_blank" class="text-blue-400 underline">{{ detail.description }}</a>
+              </span>
+            } @else {
+              {{ detail.description }}
+            }
+          </p>
         </div>
       </div>
     }
   </div>
-</section>
+</section>      
