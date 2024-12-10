@@ -39,7 +39,7 @@ export class ActivitiesComponent {
       icon: faUsers, // Ícono reemplazado
       color: 'text-green-500',
       title: 'Juegos variados',
-      description: '¡Disfruta de una variedad de juegos!',
+      description: '¡Disfruta de una variedad de juegos y sus premios!',
     },
   ];
 }
