@@ -1,4 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
-@tailwind utilities;    
+@tailwind utilities;
+
+/* Transiciones suaves */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tema claro */
+body.light-theme {
+  --bg-color: #0f1b32; /* Fondo principal */
+  --text-color: #d4bb81; /* Texto base */
+  --secondary-text-color: #555555; /* Texto secundario */
+  --accent-color: #ba0f23; /* Color de acento */
+  --button-bg: #b39f72; /* Fondo de botones */
+  --button-text: #d9dff2; /* Texto de botones */
+  --card-bg: #69a1da; /* Fondo de tarjetas */
+  --border-color: #e5e7eb; /* Bordes ligeros */
+}
+
+/* Tema oscuro */
+body.dark-theme {
+  --bg-color: #1f2937; /* Fondo principal */
+  --text-color: #d4bb81; /* Texto base */
+  --secondary-text-color: #9ca3af; /* Texto secundario */
+  --accent-color: #0f1b32; /* Color de acento */
+  --button-bg: #374151; /* Fondo de botones */
+  --button-text: #f3f4f6; /* Texto de botones */
+  --card-bg: #111827; /* Fondo de tarjetas */
+  --border-color: #4b5563; /* Bordes oscuros */
+}
+
+/* Aplicar variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-color);
+}
