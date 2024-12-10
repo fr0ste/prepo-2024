@@ -1,20 +1,295 @@
-<section class="text-center py-20">
-  <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">
-    ¡Celebremos juntos la Posada de Informática 2024!
-  </h1>
-  <p class="text-xl md:text-2xl mb-8 fade-in delay">
-    Un momento para compartir, disfrutar y cerrar el año con estilo.
-  </p>
-  <div class="grid grid-cols-4 gap-4 text-center mb-8">
-    @for (timeUnit of timeLeft; track timeUnit) {
-      <div class="time rounded-lg p-4 shadow-lg">
-        <div class="text-3xl md:text-5xl font-bold text-white">
-          {{ timeUnit.value }}
-        </div>
-        <div class="text-sm md:text-base">
-          {{ timeUnit.key }}
+<section
+  class="relative min-h-screen flex flex-col justify-center items-center text-center"
+>
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0">
+    <div class="absolute bg-gradient-to-b from-gray-800 to-gray-900 inset-0 opacity-50"></div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 px-6 max-w-screen-xl w-full">
+    <h1
+      class="title-christmas fadeInUp animated text-center"
+      data-caption-animate="fadeInUp"
+      data-caption-delay="100"
+    >
+      <span class="relative inline-block">
+        <!-- Imagen del gorro -->
+        <img
+          src="/straw.png "
+          alt="Santa Hat"
+          class="absolute w-16 sm:w-20 -top-2 -left-3 sm:-left-6"
+        />
+        <!-- Letra "C" -->
+        <span class="text-red-500 font-extrabold text-7xl sm:text-8xl">C</span>
+      </span>
+      <span class="font-bold text-4xl sm:text-5xl"
+        >elebremos juntos la Posada de Informática 2024</span
+      >
+    </h1>
+
+    <div class="anim-container mb-8">
+      <div class="hbox align-center">
+        <div class="lights vbox mx-auto">
+          <svg
+            class="w-full max-w-md md:max-w-lg"
+            width="732px"
+            height="75px"
+            viewBox="114 88 732 82"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs></defs>
+            <filter
+              id="glow"
+              width="200%"
+              height="200%"
+              filterUnits="userSpaceOnUse"
+            >
+              <feGaussianBlur stdDeviation="12.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <g
+              id="Light1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(129.000000, 117.000000) rotate(9.000000) translate(-129.000000, -117.000000) translate(119.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#FF3E3E"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="-5.68434189e-14"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(229.000000, 117.000000) rotate(-9.000000) translate(-229.000000, -117.000000) translate(219.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#50F446"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="4.26325641e-14"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy-2"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(329.000000, 117.000000) rotate(5.000000) translate(-329.000000, -117.000000) translate(319.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#FF9F19"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="-7.10542736e-15"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy-3"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(429.000000, 117.000000) rotate(-2.000000) translate(-429.000000, -117.000000) translate(419.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#221DFF"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="-1.42108547e-14"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy-4"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(529.000000, 117.000000) rotate(-9.000000) translate(-529.000000, -117.000000) translate(519.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#FFFFFF"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="2.84217094e-14"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy-5"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(629.000000, 117.000000) rotate(18.000000) translate(-629.000000, -117.000000) translate(619.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                stroke="#F51F1F"
+                fill="#FF3E3E"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="-1.42108547e-14"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy-7"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(729.000000, 117.000000) rotate(3.000000) translate(-729.000000, -117.000000) translate(719.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#50F346"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="2.13162821e-14"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <g
+              id="Light1-Copy-6"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              transform="translate(829.000000, 117.000000) rotate(-13.000000) translate(-829.000000, -117.000000) translate(819.000000, 89.000000)"
+            >
+              <ellipse
+                class="light"
+                id="Oval"
+                fill="#FF9F1A"
+                cx="10"
+                cy="37.5"
+                rx="10"
+                ry="18.5"
+              ></ellipse>
+              <rect
+                id="Rectangle"
+                fill="#496E4C"
+                x="2"
+                y="0"
+                width="16"
+                height="22"
+                rx="4"
+              ></rect>
+            </g>
+            <path
+              d="M137,94 C137,94 213.5,102 227,95.5 C240.5,89 319,89.0008917 330.5,91.5 C342,93.9991083 423.5,99.5 431,92.5 C438.5,85.5 511,99.5 529,91 C547,82.5 635.5,96.5 635.5,96.5 C635.5,96.5 720,104 735,97.5 C750,91 826,96.5 826,96.5"
+              id="Path-2"
+              stroke="#496E4C"
+              stroke-width="1"
+              fill="none"
+            ></path>
+          </svg>
         </div>
       </div>
-    }
+    </div>
+
+    <!-- Temporizador -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 py-6">
+      @for (timeUnit of timeLeft; track timeUnit) {
+      <div class="time rounded-lg p-4 shadow-lg text-white">
+        <div class="text-2xl sm:text-4xl font-bold">{{ timeUnit.value }}</div>
+        <div class="text-sm sm:text-base">{{ timeUnit.key }}</div>
+      </div>
+      }
+    </div>
   </div>
 </section>
