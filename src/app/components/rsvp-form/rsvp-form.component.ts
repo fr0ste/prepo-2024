@@ -9,12 +9,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './rsvp-form.component.scss',
 })
 export class RsvpFormComponent {
-  userName: string = '';
+  name: string = '';
   songName: string = '';
 
   submitForm() {
     // Validación básica antes de enviar
-    if (!this.userName.trim() || !this.songName.trim()) {
+    if (!this.name.trim() || !this.songName.trim()) {
       alert('Por favor, completa todos los campos antes de enviar.');
       return;
     }
@@ -26,7 +26,7 @@ export class RsvpFormComponent {
     // Construcción de parámetros
     const params = new URLSearchParams({
       usp: 'pp_url',
-      'entry.1884265043': this.userName, // Nombre del usuario
+      'entry.1884265043': this.name, // Nombre del usuario
       'entry.947742883': this.songName, // Nombre de la canción
     });
 
@@ -46,7 +46,7 @@ export class RsvpFormComponent {
   }
 
   resetForm() {
-    this.userName = '';
+    this.name = '';
     this.songName = '';
   }
 }

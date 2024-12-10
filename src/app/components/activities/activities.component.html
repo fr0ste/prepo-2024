@@ -1,12 +1,15 @@
-  <section class="py-12">
-    <h2 class="text-3xl font-bold mb-8 text-center">Actividades Destacadas</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      @for (activity of activities; track activity) {
-        <div class="p-6 rounded-lg shadow-lg">
-          <fa-icon [icon]="activity.icon" class="w-12 h-12 mb-4 {{activity.color  }}"></fa-icon>
-          <h3 class="text-xl font-semibold mb-2">{{ activity.title }}</h3>
-          <p class="">{{ activity.description }}</p>
-        </div>
-      }
+<section class="py-12">
+  <h2 class="text-3xl font-bold mb-8 text-center">Actividades destacadas</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    @for (activity of activities; track activity) {
+    <div class="card-content p-6 rounded-lg shadow-lg">
+      <fa-icon
+        [icon]="activity.icon"
+        class="w-12 h-12 mb-4 {{ activity.color }}"
+      ></fa-icon>
+      <h3 class="text-xl font-semibold mb-2">{{ activity.title }}</h3>
+      <p class="text-gray-300">{{ activity.description }}</p>
     </div>
-  </section>
+    }
+  </div>
+</section>

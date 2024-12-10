@@ -1,18 +1,18 @@
 <section class="py-12">
-  <h2 class="text-3xl font-bold mb-8 text-center text-white"> 🎶 Arma la Playlist 🎶</h2>
+  <h2 class="text-3xl font-bold mb-8 text-center"> 🎶 Arma la playlist 🎶</h2>
   <form (ngSubmit)="submitForm()" class="bg-gray-800 p-6 rounded-lg shadow-lg space-y-4 max-w-md mx-auto">
-    <label for="userName" class="block text-gray-300">Nombre del artista</label>
+    <label for="name" class="block">Nombre del artista</label>
     <input
-      id="userName"
+      id="name"
       type="text"
-      [(ngModel)]="userName"
+      [(ngModel)]="name"
       name="userName"
       class="w-full p-2 rounded-lg border"
       placeholder="Escribe el nombre"
       required
     />
 
-    <label for="songName" class="block text-gray-300">Nombre de la canción</label>
+    <label for="songName" class="block">Nombre de la canción</label>
     <input
       id="songName"
       type="text" 

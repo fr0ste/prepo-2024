@@ -1,8 +1,8 @@
 <section class="py-12">
-  <h2 class="text-3xl font-bold mb-8 text-center">Detalles del Evento</h2>
+  <h2 class="text-3xl font-bold mb-8 text-center">Detalles del evento</h2>
   <div class="grid md:grid-cols-3 gap-8">
     @for (detail of details; track detail) {
-      <div class="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg">
+      <div class="card-content flex items-center space-x-4 bg-gray-800 p-4 rounded-lg">
         <fa-icon [icon]="detail.icon" class="w-8 h-8 {{detail.color}}"></fa-icon>
         <div>
           <h3 class="font-semibold">{{ detail.title }}</h3>
