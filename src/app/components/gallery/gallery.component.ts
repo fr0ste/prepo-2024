@@ -5,10 +5,14 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.scss'
+  styleUrl: './gallery.component.scss',
 })
-
 export class GalleryComponent {
-  images = ['/IMG-1.jpg', '/IMG-2.jpg', '/IMG-3.jpg', '/IMG-4.jpg', '/IMG-5.jpg', '/IMG-6.jpg', '/IMG-7.jpg', '/IMG-8.jpg'];
+  images = [
+    'https://i.postimg.cc/HnBKtBp1/IMG-20231219-WA0069.jpg',
+    'https://i.postimg.cc/zvJ6W9Yk/IMG-20231219-WA0101.jpg',
+    'https://i.postimg.cc/8PzxCQHp/IMG-20231219-WA0111.jpg',
+    'https://i.postimg.cc/hPZ6zyy9/IMG-20241210-130719.jpg',
+    'https://i.postimg.cc/pL97Df43/IMG-20241210-130752.jpg',
+  ];
 }
-  
