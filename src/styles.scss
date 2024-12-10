@@ -62,4 +62,30 @@ a {
 
 a:hover {
   color: var(--text-color);
-}
+} 
+    
+
+  body {
+    background-image: url('/fondo.jpeg'); /* Imagen decorativa */
+    background-attachment: fixed; /* Fondo fijo al hacer scroll */
+    background-position: center; /* Centra la imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    min-height: 100vh; /* Asegura que cubra toda la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    font-family: 'Arial', sans-serif; /* Asegura una fuente legible */
+    position: relative;
+  }
+  
+  body::before {
+    content: ""; /* Necesario para que el pseudo-elemento se muestre */
+    position: absolute; /* Posiciona el pseudo-elemento sobre el body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Hereda la imagen de fondo del body */
+    filter: blur(5px); /* Aplica el desenfoque */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    position: fixed;
+  }

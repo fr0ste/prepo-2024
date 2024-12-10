@@ -1,11 +1,3 @@
-/* Fondo decorativo */
-.bg {
-  background-image: url('/fondo.jpeg'); /* Imagen decorativa */
-  background-position: center;
-  background-size: cover;
-  filter: brightness(0.8); /* Oscurece ligeramente para resaltar el texto */
-}
-
 /* Estilos para luces animadas */
 .light {
   animation: pulse 2s infinite;
