@@ -21,25 +21,28 @@ export class ActivitiesComponent {
       color: 'text-green-500',
       title: 'Trivias tecnológicas',
       description:
-        'Pon a prueba tus conocimientos en informática y tecnología.',
+        'Conecta con tu ingenio y descubre lo increíble que es aprender mientras te diviertes. ¡El conocimiento nunca fue tan emocionante!',
     },
     {
       icon: faMicrophone,
       color: 'text-red-500',
-      title: 'Karaoke navideño',
-      description: 'Canta tus villancicos favoritos con un toque tecnológico.',
+      title: 'Karaoke',
+      description:
+        'Libera tu voz y deja que el espíritu navideño brille. ¡Tus canciones favoritas te esperan para crear momentos inolvidables!',
     },
     {
-      icon:   faPersonWalking,
+      icon: faPersonWalking,
       color: 'text-blue-500',
       title: 'Concurso de baile',
-      description: '¡Participa y muestra tus mejores pasos!',
+      description:
+        'Deja que la música te guíe y muestra al mundo tus mejores pasos. ¡El escenario es tuyo, y la diversión está garantizada!',
     },
     {
-      icon: faUsers, // Ícono reemplazado
+      icon: faUsers,
       color: 'text-green-500',
       title: 'Juegos variados',
-      description: '¡Disfruta de una variedad de juegos y sus premios!',
+      description:
+        'Sumérgete en momentos de alegría y compañerismo. ¡Descubre la magia de jugar y ganar en equipo!',
     },
   ];
 }
