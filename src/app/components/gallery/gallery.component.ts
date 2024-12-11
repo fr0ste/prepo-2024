@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import imageApi from '../../services/image-api.service';
 
 @Component({
   selector: 'app-gallery',
@@ -8,11 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './gallery.component.scss',
 })
 export class GalleryComponent {
-  images = [
-    'https://i.postimg.cc/HnBKtBp1/IMG-20231219-WA0069.jpg',
-    'https://i.postimg.cc/zvJ6W9Yk/IMG-20231219-WA0101.jpg',
-    'https://i.postimg.cc/8PzxCQHp/IMG-20231219-WA0111.jpg',
-    'https://i.postimg.cc/hPZ6zyy9/IMG-20241210-130719.jpg',
-    'https://i.postimg.cc/pL97Df43/IMG-20241210-130752.jpg',
-  ];
+  
+  images: { src: string; alt: string }[] = [];
+  numberOfImages = 0;
+
+  async ngOnInit(): Promise<void> {
+    try {
+      // Consumir las imágenes desde el servicio
+      this.images = await imageApi.list();
+      this.numberOfImages = this.images.length; // Establecer dinámicamente
+    } catch (error) {
+      console.error('Error al cargar imágenes:', error);
+    }
+  }
 }

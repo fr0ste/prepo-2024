@@ -1,7 +1,7 @@
-$n: 5; /* number of images */
-
 .gallery {
-  --d: 10s; /* duration */
+  --d: 10s; /* Duración */
+  --n: 5; /* Número de imágenes (por defecto) */
+
   display: grid;
   width: 320px;
 }
@@ -22,14 +22,14 @@ $n: 5; /* number of images */
 }
 
 /* Estilo para cada imagen */
-@for $i from 1 through $n {
+@for $i from 1 through 10 { /* Máximo de imágenes permitido */
   .gallery > img:nth-child(#{$i}) {
-    animation-delay: calc((1 - $i) / $n * var(--d));
-    --r: -20deg + random(40deg); /* Simplificación sin interpolación */
+    animation-delay: calc((1 - $i) / var(--n) * var(--d));
+    --r: -20deg + random(40deg);
   }
 }
 
-/* Keyframes con cálculos directos */
+/* Keyframes ajustados */
 @keyframes slide {
   50% {
     transform: translateX(120%) rotate(var(--r));
