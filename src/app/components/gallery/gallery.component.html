@@ -1,11 +1,11 @@
 <section
   class="relative min-h-screen flex flex-col justify-center items-center text-center py-12"
->
+  >
   <h2 class="text-3xl font-bold mb-20 text-center">Galería de fotos</h2>
   <div class="grid mb-8">
-    <div class="gallery">
-      @for (img of images; track $index) {
-      <img [src]="img" alt="{{img}}" />
+    <div class="gallery" [style.--n]="numberOfImages">
+      @for (image of images; track image) {
+        <img [src]="image.src" [alt]="image.alt">
       }
     </div>
   </div>
