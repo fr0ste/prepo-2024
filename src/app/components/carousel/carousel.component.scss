@@ -1,0 +1,41 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+
+  .carousel-track {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-slide {
+    background-color: var(--border-color);
+    position: absolute;
+    transition: transform 0.5s ease-in-out, z-index 0.5s ease-in-out;
+    transform-origin: center;
+
+    &.current {
+      transform: translate(0, 0) rotate(0deg);
+      z-index: 3;
+    }
+
+    &.previous {
+      transform: translate(-20px, 10px) rotate(-2deg);
+      z-index: 2;
+    }
+
+    &.next {
+      transform: translate(20px, -10px) rotate(2deg);
+      z-index: 2;
+    }
+
+    &:not(.current):not(.previous):not(.next) {
+      transform: translate(0, 0) scale(0.9);
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+}
