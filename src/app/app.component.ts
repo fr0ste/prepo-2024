@@ -40,4 +40,8 @@ export class AppComponent {
   ngOnInit(): void {
 
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

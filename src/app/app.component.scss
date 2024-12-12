@@ -1,24 +1,28 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  h1, h2 {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-  }
-  
-  button {
-    transition: all 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: var(--green);
-  }
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
 
-  .bg {
-    background-image: url('/fondo.jpeg'); /* Imagen decorativa */
-    background-position: center;
-    background-size: cover;
-    filter: brightness(0.8); /* Oscurece ligeramente para resaltar el texto */
-  }
-  
+h1,
+h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--green);
+}
+
+.bg {
+  background-image: url("/fondo.jpeg"); /* Imagen decorativa */
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.8); /* Oscurece ligeramente para resaltar el texto */
+}
+
+.btn-top{
+  background-color: var(--green);
+}
