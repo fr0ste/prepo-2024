@@ -1,15 +1,17 @@
 import { Component, inject } from '@angular/core';
 import imageApi from '../../services/image-api.service';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [],
+  imports: [
+    CarouselComponent
+  ],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss',
 })
 export class GalleryComponent {
-  
   images: { src: string; alt: string }[] = [];
   numberOfImages = 0;
 

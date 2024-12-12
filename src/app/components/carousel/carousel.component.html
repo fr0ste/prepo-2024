@@ -1,0 +1,18 @@
+<div class="carousel-container relative w-full max-w-3xl mx-auto h-[500px]">
+  <div class="carousel-track absolute inset-0 flex items-center justify-center">
+    @for (photo of photos; track photo; let index = $index) {
+      <div
+        class="carousel-slide absolute p-3 shadow-xl"
+        [class.current]="index === currentIndex"
+        [class.previous]="index === (currentIndex - 1 + photos.length) % photos.length"
+        [class.next]="index === (currentIndex + 1) % photos.length"
+        >
+        <div class="relative">
+          <div class="absolute inset-0 shadow-inner"></div>
+          <img [src]="photo.src" [alt]="photo.alt" class="w-[400px] h-[300px] object-cover" />
+          <div class="absolute inset-0 bg-[url('/vintage-texture.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
