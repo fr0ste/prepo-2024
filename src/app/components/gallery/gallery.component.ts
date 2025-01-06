@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import imageApi from '../../services/image-api.service';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [],
+  imports: [
+    CarouselComponent
+  ],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.scss'
+  styleUrl: './gallery.component.scss',
 })
-
 export class GalleryComponent {
-  //quien vaya a implementar esto revisar la documentacion de angular 18 porque cambió la forma de agregar las imágenes y no usen el amigo de arriba porque no sabe xd
-  images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
+  images: { src: string; alt: string }[] = [];
+  numberOfImages = 0;
+
+  async ngOnInit(): Promise<void> {
+    try {
+      // Consumir las imágenes desde el servicio
+      this.images = await imageApi.list();
+      this.numberOfImages = this.images.length; // Establecer dinámicamente
+    } catch (error) {
+      console.error('Error al cargar imágenes:', error);
+    }
+  }
 }

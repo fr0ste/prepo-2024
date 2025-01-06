@@ -1,8 +1,9 @@
-<section class="py-12">
-  <h2 class="text-3xl font-bold mb-8 text-center text-white">Galería de Fotos</h2>
-  <div class="grid md:grid-cols-4 gap-4">
-    @for (img of images; track img) {
-      <img [src]="img" alt="Gallery Image" class="rounded-lg shadow-lg">
-    }
-  </div>
+<section class="gallery-container min-h-screen py-12">
+  <h2 class="text-3xl font-bold mb-5 text-center">
+    Galería de recuerdos: el pasado nos inspira, ¡y el futuro lo haremos juntos!
+  </h2>
+  <h3 class="text-2 font-bold text-center text-gray-300">
+    Cada sonrisa cuenta, y este año queremos ver la tuya en nuestra galería.
+  </h3>
+  <app-carousel [photos]="images"></app-carousel>
 </section>

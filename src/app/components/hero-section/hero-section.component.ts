@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })
@@ -38,4 +38,7 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
       { key: 'Segundos', value: seconds },
     ];
   }
+
+
+    
 }

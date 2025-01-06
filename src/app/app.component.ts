@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ThemeService } from './services/theme.service';
+import { Component, inject, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SnowfallAnimationComponent } from './components/snowfall-animation/snowfall-animation.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
@@ -27,4 +28,20 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'prepo-2024';
+
+  public ThemeService = inject(ThemeService);
+
+  constructor() {}
+
+  toggleTheme(): void {
+    this.ThemeService.toggleTheme();
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

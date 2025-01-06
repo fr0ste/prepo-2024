@@ -1,27 +1,43 @@
-# Prepo2024
+# Proyecto Prepo2024
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+Este proyecto fue generado con Angular CLI versión 18.2.0.
 
-## Development server
+# Arquitecura
+Se usa una aquitectura basada en screaming arquitecture para la estructura de carpetas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Prerrequisitos
+Prerrequisitos
+Asegúrate de tener instalados los siguientes componentes:
 
-## Code scaffolding
+Node.js: Se recomienda gestionar las versiones con nvm.
+Angular CLI: Asegúrate de instalar la versión correcta.
+Nota: Consulta la documentación oficial de Angular para más detalles.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Configuración inicial
+- Clonar el repositorio: git clone https://github.com/fr0ste/prepo-2024.git
+- Instalar dependencias: npm install o yarn install
+- Iniciar servidor de desarrollo: ng serve y navegar a http://localhost:4200/
 
-## Build
+# Pasos para realizar una tarea (issue)
+- Crear una rama: git checkout -b feature/tarea-123
+- Realizar cambios: Hacer los cambios necesarios en el código
+- Commit: Realizar un commit con un mensaje de commit claro y conciso utilizando la convención de commits de Conventional Commits:
+  - feat: Agregar función de búsqueda
+  - fix: Corregir error de renderizado
+  - docs: Actualizar documentación
+- Push: git push origin feature/tarea-123
+- Crear pull request: Crear un pull request desde la rama feature/tarea-123 hacia la rama dev
+- Revisar y aprobar: Asignar a un miembro y notifica para revisión.
+- Merge: git merge feature/tarea-123 y eliminar la rama feature/tarea-123
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Conventional Commits
+Utilizar la convención de commits de Conventional Commits para mantener un registro claro y conciso de los cambios realizados.
+Utilizar los siguientes tipos de commits:
+- feat: Agregar una nueva función o característica
+- fix: Corregir un error o problema
+- docs: Actualizar la documentación
+- style: Cambios en la forma o estilo del código
+- refactor: Refactorizar el código
+- perf: Mejorar el rendimiento del código
+- test: Agregar o corregir pruebas
+- chore: Realizar tareas administrativas o de mantenimiento
